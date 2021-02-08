@@ -1,0 +1,7 @@
+{
+    "name": "vendor/monolog",
+    "description": "OStat",
+    "require": {
+        "monolog/monolog": "1.1.*"
+    }
+}
