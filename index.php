@@ -1,3 +1,3 @@
 <?php
-    echo "Hello";
+    require('vendor/autoload.php');
 ?>
