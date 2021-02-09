@@ -29,7 +29,7 @@
                         <textarea class="form-control" id="answer" name="answer" placeholder="Đáp án"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Trận đấu: </label> 
+                        <label>Trận đấu:<sup>(*)</sup> </label> 
                         <div class="form-check-inline">
                             <label class="form-check-label" for="week"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
                         </div>
@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label>Số điểm: </label> 
+                        <label>Số điểm:<sup>(*)</sup> </label> 
                         <div class="form-check-inline">
                             <label class="form-check-label" for="ten"> <input type="radio" class="form-check-input" value="10" id="ten" name="point"> 10 </label>
                         </div>
@@ -61,6 +61,7 @@
                 </form>
             </div>
         </div>
-        <hr />
+        
+        <script src="index.js"></script>
     </body>
 </html>
