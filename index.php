@@ -29,8 +29,10 @@
                         <textarea class="form-control" id="answer" name="answer" placeholder="Đáp án"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Lí do: </label>
-                        <textarea class="form-control" id="reason" name="reason" placeholder="Lí do"></textarea>
+                        <label>Trận đấu: </label>
+                        <label> Tuần <input type="radio" class="form-control" id="week" name="week"> </label>
+                        <label> Tháng <input type="radio" class="form-control" id="month" name="month"> </label>
+                        <label> Quý <input type="radio" class="form-control" id="quarter" name="quarter"> </label>
                     </div>
                     <div class="form-group">
                         <button id="button_submit" style="width: 100%" class="btn btn-success" >
@@ -39,10 +41,6 @@
                         </button>
                     </div>
                 </form>
-                    
-                <div id="alert">
-                        
-                </div>
             </div>
         </div>
         <hr />
