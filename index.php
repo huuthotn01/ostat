@@ -30,6 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label>Trận đấu:<sup>(*)</sup> </label> 
+                        <br />
                         <div class="form-check-inline">
                             <label class="form-check-label" for="week"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
                         </div>
@@ -42,6 +43,7 @@
                     </div>
                     <div class="form-group">
                         <label>Số điểm:<sup>(*)</sup> </label> 
+                        <br />
                         <div class="form-check-inline">
                             <label class="form-check-label" for="ten"> <input type="radio" class="form-check-input" value="10" id="ten" name="point"> 10 </label>
                         </div>
@@ -54,6 +56,7 @@
                     </div>
                     <div class="form-group">
                         <label>Lĩnh vực:<sup>(*)</sup> </label> 
+                        <br />
                         <div class="form-check-inline">
                             <label class="form-check-label" for="math"> <input type="checkbox" class="form-check-input" value="Toán" id="math" name="field"> Toán </label>
                         </div>
