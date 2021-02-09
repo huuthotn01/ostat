@@ -28,11 +28,20 @@
                         <label for="answer">Đáp án:<sup>(*)</sup> </label>
                         <textarea class="form-control" id="answer" name="answer" placeholder="Đáp án"></textarea>
                     </div>
-                    <div class="form-check">
-                        <label>Trận đấu: </label>
-                        <label class="form-check-label"> Tuần <input type="radio" class="form-check-input" value="week" id="week" name="match"> </label>
-                        <label class="form-check-label"> Tháng <input type="radio" class="form-check-input" value="month" id="month" name="match"> </label>
-                        <label class="form-check-label"> Quý <input type="radio" class="form-check-input" value="quarter" id="quarter" name="match"> </label>
+                    <div class="form-group">
+                        <label>Trận đấu: </label> 
+                        <div class="form-check">
+                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="month" id="month" name="match"> Tháng </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="quarter" id="quarter" name="match"> Quý </label>
+                        </div>
                     </div>
                     <div class="form-group">
                         <button id="button_submit" style="width: 100%" class="btn btn-success" >
