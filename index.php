@@ -1,4 +1,4 @@
 <?php
     require('vendor/autoload.php');
-    echo "Hellooo";
+    echo "Hello, This is OStat";
 ?>
