@@ -21,18 +21,18 @@
                 <p><strong>Thêm thông tin bằng bảng sau: (có (*) là bắt buộc)</strong></p>
                 <form id="add-form" method="POST">
                     <div class="form-group">
-                        <label>Câu hỏi:<sup>(*)</sup> </label>
+                        <label for="quest">Câu hỏi:<sup>(*)</sup> </label>
                         <textarea class="form-control" id="quest" name="quest" placeholder="Câu hỏi"></textarea>
                     </div>
                     <div class="form-group">
-                        <label>Đáp án:<sup>(*)</sup> </label>
+                        <label for="answer">Đáp án:<sup>(*)</sup> </label>
                         <textarea class="form-control" id="answer" name="answer" placeholder="Đáp án"></textarea>
                     </div>
-                    <div class="form-group">
+                    <div class="form-check">
                         <label>Trận đấu: </label>
-                        <label> Tuần <input type="radio" class="form-control" id="week" name="week"> </label>
-                        <label> Tháng <input type="radio" class="form-control" id="month" name="month"> </label>
-                        <label> Quý <input type="radio" class="form-control" id="quarter" name="quarter"> </label>
+                        <label class="form-check-label"> Tuần <input type="radio" class="form-check-input" value="week" id="week" name="match"> </label>
+                        <label class="form-check-label"> Tháng <input type="radio" class="form-check-input" value="month" id="month" name="match"> </label>
+                        <label class="form-check-label"> Quý <input type="radio" class="form-check-input" value="quarter" id="quarter" name="match"> </label>
                     </div>
                     <div class="form-group">
                         <button id="button_submit" style="width: 100%" class="btn btn-success" >
