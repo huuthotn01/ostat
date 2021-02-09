@@ -5,11 +5,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-		<title>OStat - Home Page</title>
+        <title>O Stat</title>
 		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 	</head>
 
     <body>
@@ -50,6 +50,33 @@
                         </div>
                         <div class="form-check-inline">
                             <label class="form-check-label" for="thirty"> <input type="radio" class="form-check-input" value="30" id="thirty" name="point"> 30 </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Lĩnh vực:<sup>(*)</sup> </label> 
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="math"> <input type="checkbox" class="form-check-input" value="Toán" id="math" name="field"> Toán </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="physics"> <input type="checkbox" class="form-check-input" value="Lý" id="physics" name="field"> Lý </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="chemistry"> <input type="checkbox" class="form-check-input" value="Hóa" id="chemistry" name="field"> Hóa </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="biology"> <input type="checkbox" class="form-check-input" value="Sinh" id="biology" name="field"> Sinh </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="literature"> <input type="checkbox" class="form-check-input" value="Văn" id="literature" name="field"> Văn </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="history"> <input type="checkbox" class="form-check-input" value="Sử" id="history" name="field"> Sử </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="geography"> <input type="checkbox" class="form-check-input" value="Địa" id="geography" name="field"> Địa </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="english"> <input type="checkbox" class="form-check-input" value="Anh văn" id="english" name="field"> Anh văn </label>
                         </div>
                     </div>
                     <div class="form-group">
