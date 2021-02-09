@@ -18,7 +18,7 @@
         </noscript>
         <div class="row">
             <div class="col-xl-12">
-                <p><strong>Thêm thông tin bằng bảng sau: (có (*) là bắt buộc)</strong></p>
+                <p><strong>Thêm thông tin bằng bảng sau: (có <sup>(*)</sup> là bắt buộc)</strong></p>
                 <form id="add-form" method="POST">
                     <div class="form-group">
                         <label for="quest">Câu hỏi:<sup>(*)</sup> </label>
@@ -105,14 +105,14 @@
                         <label>Các yếu tố khác: </label> 
                         <br />
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="calculating" disabled> 
-                                <input type="checkbox" class="form-check-input" value="calculating" id="calculating" name="others" disabled> 
+                            <label class="form-check-label" for="calculating"> 
+                                <input type="checkbox" class="form-check-input" value="calculating" id="calculating" name="others"> 
                                 Tính toán 
                             </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="video" disabled> 
-                                <input type="checkbox" class="form-check-input" value="video" id="video" name="others" disabled> 
+                            <label class="form-check-label" for="video"> 
+                                <input type="checkbox" class="form-check-input" value="video" id="video" name="others"> 
                                 Video
                             </label>
                         </div>
