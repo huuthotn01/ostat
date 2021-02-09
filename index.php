@@ -111,7 +111,7 @@
                             </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="video"> 
+                            <label class="form-check-label" for="video" disabled> 
                                 <input type="checkbox" class="form-check-input" value="video" id="video" name="others" disabled> 
                                 Video
                             </label>
