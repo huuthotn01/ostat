@@ -58,29 +58,68 @@
                         <label>Lĩnh vực:<sup>(*)</sup> </label> 
                         <br />
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="math"> <input type="checkbox" class="form-check-input" value="Toán" id="math" name="field"> Toán </label>
+                            <label class="form-check-label" for="math"> <input type="checkbox" class="form-check-input" value="math" id="math" name="field"> Toán </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="physics"> <input type="checkbox" class="form-check-input" value="Lý" id="physics" name="field"> Lý </label>
+                            <label class="form-check-label" for="physics"> <input type="checkbox" class="form-check-input" value="physics" id="physics" name="field"> Lý </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="chemistry"> <input type="checkbox" class="form-check-input" value="Hóa" id="chemistry" name="field"> Hóa </label>
+                            <label class="form-check-label" for="chemistry"> <input type="checkbox" class="form-check-input" value="chemistry" id="chemistry" name="field"> Hóa </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="biology"> <input type="checkbox" class="form-check-input" value="Sinh" id="biology" name="field"> Sinh </label>
+                            <label class="form-check-label" for="biology"> <input type="checkbox" class="form-check-input" value="biology" id="biology" name="field"> Sinh </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="literature"> <input type="checkbox" class="form-check-input" value="Văn" id="literature" name="field"> Văn </label>
+                            <label class="form-check-label" for="literature"> <input type="checkbox" class="form-check-input" value="literature" id="literature" name="field"> Văn </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="history"> <input type="checkbox" class="form-check-input" value="Sử" id="history" name="field"> Sử </label>
+                            <label class="form-check-label" for="history"> <input type="checkbox" class="form-check-input" value="history" id="history" name="field"> Sử </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="geography"> <input type="checkbox" class="form-check-input" value="Địa" id="geography" name="field"> Địa </label>
+                            <label class="form-check-label" for="geography"> <input type="checkbox" class="form-check-input" value="geography" id="geography" name="field"> Địa </label>
                         </div>
                         <div class="form-check-inline">
-                            <label class="form-check-label" for="english"> <input type="checkbox" class="form-check-input" value="Anh văn" id="english" name="field"> Anh văn </label>
+                            <label class="form-check-label" for="english"> <input type="checkbox" class="form-check-input" value="english" id="english" name="field"> Anh văn </label>
                         </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Lớp:<sup>(*)</sup> </label> 
+                        <br />
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="grade_9"> <input type="radio" class="form-check-input" value="9" id="grade_9" name="grade"> 6 - 9 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="grade_10"> <input type="radio" class="form-check-input" value="10" id="grade_10" name="grade"> 10 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="grade_11"> <input type="radio" class="form-check-input" value="11" id="grade_11" name="grade"> 11 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="grade_12"> <input type="radio" class="form-check-input" value="12" id="grade_12" name="grade"> 12 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="grade_13"> <input type="radio" class="form-check-input" value="13" id="grade_13" name="grade"> Ngoài sách </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Các yếu tố khác: </label> 
+                        <br />
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="calculating" disabled> 
+                                <input type="checkbox" class="form-check-input" value="calculating" id="calculating" name="others" disabled> 
+                                Tính toán 
+                            </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="video"> 
+                                <input type="checkbox" class="form-check-input" value="video" id="video" name="others" disabled> 
+                                Video
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="notice">Ghi chú: </label>
+                        <textarea class="form-control" id="notice" name="notice" placeholder="Ghi chú"></textarea>
                     </div>
                     <div class="form-group">
                         <button id="button_submit" style="width: 100%" class="btn btn-success" >
