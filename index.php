@@ -30,17 +30,26 @@
                     </div>
                     <div class="form-group">
                         <label>Trận đấu: </label> 
-                        <div class="form-check">
-                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="week"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
                         </div>
-                        <div class="form-check">
-                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="week" id="week" name="match"> Tuần </label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="month"> <input type="radio" class="form-check-input" value="month" id="month" name="match"> Tháng </label>
                         </div>
-                        <div class="form-check">
-                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="month" id="month" name="match"> Tháng </label>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="quarter"> <input type="radio" class="form-check-input" value="quarter" id="quarter" name="match"> Quý </label>
                         </div>
-                        <div class="form-check">
-                            <label class="form-check-label"> <input type="radio" class="form-check-input" value="quarter" id="quarter" name="match"> Quý </label>
+                    </div>
+                    <div class="form-group">
+                        <label>Số điểm: </label> 
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="ten"> <input type="radio" class="form-check-input" value="10" id="ten" name="point"> 10 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="twenty"> <input type="radio" class="form-check-input" value="20" id="twenty" name="point"> 20 </label>
+                        </div>
+                        <div class="form-check-inline">
+                            <label class="form-check-label" for="thirty"> <input type="radio" class="form-check-input" value="30" id="thirty" name="point"> 30 </label>
                         </div>
                     </div>
                     <div class="form-group">
