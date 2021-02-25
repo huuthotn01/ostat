@@ -32,7 +32,6 @@ $(document).ready(function() {
                 if (this.readyState == 4 && this.status == 200) {
                     $("#server-result").html("");
                     $("#server-result").html(this.responseText);
-                    $("#slider-0 #add-form, #slider-1 #add-form, #slider-2 #add-form").trigger("reset");
                 }
             };
             xhttp.open("POST", "/action.php", true);
@@ -46,11 +45,17 @@ $(document).ready(function() {
         e.preventDefault();
         console.log("Unavailable!");
     });
+
+    $("#slider-0 #quest, #slider-1 #quest, #slider-2 #quest, #slider-0 #answer, #slider-1 #answer, #slider-2 #answer, #slider-0 #notice, #slider-1 #notice, #slider-2 #notice").keypress(function(e) {
+        if (String.fromCharCode(e.which) === '|') {
+            e.preventDefault();
+            alert("Character '|' is not allowed!");
+        }
+    });
 });
 
 function getSubmitId(id) {
     var slider_num = id[8];
-    // console.log("Each slider submit, " + (typeof submit_quest(slider_num)));
     return submit_quest(slider_num);
 }
 
@@ -66,9 +71,11 @@ function submit_quest(slider_num) {
         history: false,
         geography: false,
         english: false,
+        other: false,
         calculating: false,
         video: false,
         match: "",
+        match_code: "",
         point: "",
         grade: "",
         quest: "",
@@ -102,6 +109,22 @@ function submit_quest(slider_num) {
     }
     if (!has_check) throw ("Choose match at slider " + slider_num);
 
+    // match code
+    var match_code = $(selector + "#match_code").val();
+    if (match_code === "") throw ("Enter match code at slider " + slider_num);
+    else {
+        for (let i = 0; i < match_code.length; i++) {
+            if (match_code.charCodeAt(i) < 49 || match_code.charCodeAt(i) > 52) throw ("Invalid character in match code at slider " + slider_num); 
+        }
+        var match = data["match"];
+        if ((match === "week" && (match_code.length !== 3 || match_code.charCodeAt(0) === 52 || match_code.charCodeAt(1) === 52)) || 
+            (match === "month" && (match_code.length !== 2 || match_code.charCodeAt(0) === 52)) || (match === "quarter" && match_code.length !== 1)) {
+            throw ("Invalid match code length and number at slider " + slider_num);
+        } else {
+            data["match_code"] = match_code;
+        }
+    }
+
     // point
     has_check = false;
     var point_var = ["ten", "twenty", "thirty"];
@@ -117,7 +140,7 @@ function submit_quest(slider_num) {
     if (!has_check) throw ("Choose point at slider " + slider_num);
 
     // field
-    var field_name = ["math", "physics", "chemistry", "biology", "literature", "history", "geography", "english"];
+    var field_name = ["math", "physics", "chemistry", "biology", "literature", "history", "geography", "english", "other"];
     var field_val_num = field_name.length;
     has_check = false;
     for (var i = 0; i < field_val_num; i++) {
