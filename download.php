@@ -10,7 +10,7 @@
             clearstatcache();
             header('Content-Description: File Transfer');
             header('Content-Type: text/csv');
-            header('Content-Disposition: attachment; filename="'.basename($file).'"');
+            header('Content-Disposition: attachment; filename='.basename($file));
             header('Content-Length: '.filesize($file));
             header('Pragma: public');
             flush();
