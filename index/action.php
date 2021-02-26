@@ -39,6 +39,10 @@
         }
     }
 
+    if (!(isset($_POST["first"], $_POST["second"], $_POST["third"]))) {
+        alertMsg('Error', 'danger');
+        exit;
+    }
     $input_quest = [$_POST["first"], $_POST["second"], $_POST["third"]];
     $input_quest_array = array_map('jsonDecode', $input_quest);
     $test_regex = "/|/i";
