@@ -12,6 +12,7 @@ $(document).ready(function() {
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         var info = "match=" + match;
         xhttp.send(info);
+        console.log("Request sent");
     });
 });
 
