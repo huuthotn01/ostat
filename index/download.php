@@ -4,7 +4,7 @@
         exit;
     }
     $id = $_POST["match"];
-    $file = "csv_data";
+    $file = "../csv_data";
     if ($id == "weekly-download") $file = $file."/week.csv";
     else if ($id == "monthly-download") $file = $file."/month.csv";
     else if ($id == "quarterly-download") $file = $file."/quarter.csv";
