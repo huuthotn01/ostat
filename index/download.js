@@ -8,7 +8,7 @@ $(document).ready(function() {
                 $("#download-result").html(this.responseText);
             }
         };
-        xhttp.open("POST", "/download.php", true);
+        xhttp.open("POST", "index/download.php", true);
         xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         var info = "match=" + match;
         xhttp.send(info);
