@@ -52,7 +52,7 @@
     } else if ($input_quest_array[0]["num"] != "0" || $input_quest_array[1]["num"] != "1" || $input_quest_array[2]["num"] != "2") {
         alertMsg('Something wrong, refresh page and try again!', 'danger');
     } else {
-        $file_name = "D:\\OStat\\csv_data\\".$input_quest_array[0]["match"].".csv";
+        $file_name = "../csv_data/".$input_quest_array[0]["match"].".csv";
         $passed = true;
         try {
             $file = fopen($file_name, 'a+');
