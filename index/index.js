@@ -34,7 +34,7 @@ $(document).ready(function() {
                     $("#server-result").html(this.responseText);
                 }
             };
-            xhttp.open("POST", "/action.php", true);
+            xhttp.open("POST", "index/action.php", true);
             xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
             var info = "first=" + data[0] + "&second=" + data[1] + "&third=" + data[2];
             xhttp.send(info);

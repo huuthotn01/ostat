@@ -1,1 +1,5 @@
+AllowOverride all
+
+<Directory "/index">
 DirectoryIndex /index/index.php
+</Directory>
