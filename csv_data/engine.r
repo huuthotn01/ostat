@@ -2,7 +2,7 @@ match <- c('week', 'month', 'quarter')
 file_dir <- paste('D:\\Ostat\\csv_data\\', match[1], '.csv', sep="")
 df <- read.table(file_dir, header = TRUE, sep = '|', encoding = 'UTF-8')
 df[is.na(df)] <- 0
-View(df)
+View(df[, 1:2])
 
 df_mcode <- df[order(df$match_code),]
 num_quest <- nrow(df_mcode)
