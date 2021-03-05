@@ -29,6 +29,6 @@
                 video boolean
                 )";
     if ($pdo->query($query) != false) {
-        echo "Fail";
-    } else echo "Success";
+        echo "Success";
+    } else echo "Fail";
 ?>
