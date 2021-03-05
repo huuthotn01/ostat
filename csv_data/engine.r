@@ -1,13 +1,9 @@
 match <- c('week', 'month', 'quarter')
-file_dir <- paste('D:\\Ostat\\csv_data\\', match[1], '.csv', sep="")
+file_dir <- paste('D:\\Ostat\\csv_data\\', match[3], '.csv', sep="")
 df <- read.table(file_dir, header = TRUE, sep = '|', encoding = 'UTF-8')
 df[is.na(df)] <- 0
-View(df[, 1:2])
+View(df)
 
-df_mcode <- df[order(df$match_code),]
-num_quest <- nrow(df_mcode)
-field <- c('math', 'physics', 'chemistry', 'biology', 'literature', 'history', 'geography', 'english', 'other')
-for (i in field) {
-  df_sort <- df_mcode[df_mcode$i == 1]
-  
-}
+df_sort <- df[df$video == 1 & df$english == 0 & df$chemistry == 0, ]
+print(nrow(df_sort))
+View(df_sort)
