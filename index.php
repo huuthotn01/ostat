@@ -8,7 +8,7 @@
         $db["host"], $db["port"], $db["user"], $db["pass"],
         ltrim($db["path"], "/")
     ));
-    
+    try {
     $match = ["week", "month", "quarter"];
     foreach ($match as $match_name) {
         $test = $pdo->query("SELECT 1 FROM $test LIMIT 1");
@@ -37,5 +37,8 @@
                 echo "Success";
             } else echo "Fail";
         }
+    }
+    } catch(Exception $e) {
+        echo $e;
     }
 ?>
