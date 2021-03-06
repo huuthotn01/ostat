@@ -8,30 +8,34 @@
         $db["host"], $db["port"], $db["user"], $db["pass"],
         ltrim($db["path"], "/")
     ));
-    $test = $pdo->query("SELECT 1 FROM `week` LIMIT 1");
-    if ($test === false) {
-        $query = "CREATE TABLE week (
-                    quest_id SERIAL,
-                    quest text,
-                    answer text,
-                    point text,
-                    grade smallint,
-                    match_code smallint,
-                    notice text,
-                    math boolean,
-                    physics boolean,
-                    chemistry boolean,
-                    biology boolean,
-                    literature boolean,
-                    history boolean,
-                    geography boolean,
-                    english boolean,
-                    other boolean,
-                    calculating boolean,
-                    video boolean
-                    )";
-        if ($pdo->query($query) != false) {
-            echo "Success";
-        } else echo "Fail";
-    } else echo "Existed";
+    
+    $match = ["week", "month", "quarter"];
+    foreach ($match as $match_name) {
+        $test = $pdo->query("SELECT 1 FROM $test LIMIT 1");
+        if ($test === false) {
+            $query = "CREATE TABLE $test (
+                quest_id SERIAL,
+                quest text,
+                answer text,
+                point text,
+                grade smallint,
+                match_code smallint,
+                notice text,
+                math boolean,
+                physics boolean,
+                chemistry boolean,
+                biology boolean,
+                literature boolean,
+                history boolean,
+                geography boolean,
+                english boolean,
+                other boolean,
+                calculating boolean,
+                video boolean
+                )";
+            if ($pdo->query($query) != false) {
+                echo "Success";
+            } else echo "Fail";
+        }
+    }
 ?>
