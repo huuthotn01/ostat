@@ -9,10 +9,8 @@
         ltrim($db["path"], "/")
     ));
     try {
-    $match = ["week", "month", "quarter"];
+    $match = ["month", "quarter"];
     foreach ($match as $match_name) {
-        $test = $pdo->query("SELECT 1 FROM $match_name LIMIT 1");
-        if ($test === false) {
             $query = "CREATE TABLE $match_name (
                 quest_id SERIAL,
                 quest text,
@@ -36,7 +34,6 @@
             if ($pdo->query($query) != false) {
                 echo "Success";
             } else echo "Fail";
-        }
     }
     } catch(Exception $e) {
         echo $e;
