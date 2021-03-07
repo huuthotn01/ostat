@@ -8,34 +8,5 @@
         $db["host"], $db["port"], $db["user"], $db["pass"],
         ltrim($db["path"], "/")
     ));
-    try {
-    $match = ["month", "quarter"];
-    foreach ($match as $match_name) {
-            $query = "CREATE TABLE $match_name (
-                quest_id SERIAL,
-                quest text,
-                answer text,
-                point text,
-                grade smallint,
-                match_code smallint,
-                notice text,
-                math boolean,
-                physics boolean,
-                chemistry boolean,
-                biology boolean,
-                literature boolean,
-                history boolean,
-                geography boolean,
-                english boolean,
-                other boolean,
-                calculating boolean,
-                video boolean
-                )";
-            if ($pdo->query($query) != false) {
-                echo "Success";
-            } else echo "Fail";
-    }
-    } catch(Exception $e) {
-        echo $e;
-    }
+    
 ?>
