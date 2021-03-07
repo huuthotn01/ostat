@@ -1,7 +1,6 @@
 <?php
     require('vendor/autoload.php');
     // include "index/index.php";
-    echo "Hi" . PHP_EOL;
     $db = parse_url(getenv("DATABASE_URL"));
     $pdo = new PDO("pgsql:" . sprintf(
         "host=%s;port=%s;user=%s;password=%s;dbname=%s",
@@ -11,7 +10,7 @@
     echo "Importing CSV data..." . PHP_EOL;
     $match = ["week", "month", "quarter"];
     for ($i = 0; $i < 3; $i++) {
-        if (($file = fopen("csv_data/".$match[$i]."csv", "r")) !== FALSE) {
+        if (($file = fopen("/csv_data"."/".$match[$i]."csv", "r")) !== FALSE) {
             while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
                 echo $size;
