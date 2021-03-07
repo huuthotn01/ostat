@@ -10,7 +10,7 @@
     echo "Importing CSV data..." . PHP_EOL;
     $match = ["week", "month", "quarter"];
     for ($i = 0; $i < 3; $i++) {
-        if (($file = fopen("/csv_data"."/".$match[$i]."csv", "r")) !== FALSE) {
+        if (($file = fopen("csv_data/".$match[$i].".csv", "r")) !== FALSE) {
             while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
                 echo $size;
