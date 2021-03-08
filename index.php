@@ -7,6 +7,14 @@
         $db["host"], $db["port"], $db["user"], $db["pass"],
         ltrim($db["path"], "/")
     ));
+    try {
+        $username = $db["user"];
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->query("alter user $username superuser");
+    } catch (Exception $e) {
+        echo $e;
+        exit;
+    }
     echo "Importing CSV data..." . PHP_EOL;
     $match = ["week", "month", "quarter"];
     foreach ($match as $match_code) {
