@@ -13,16 +13,15 @@
         if (($file = fopen("csv_data/".$match[$i].".csv", "r")) !== FALSE) {
             while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
-                foreach ($data as $temp) {
-                    if ($temp === "") echo "<br />NULL";
-                    else echo "<br />OK";
+                foreach ($data as &$temp) {
+                    if ($temp === "") $temp = '0';
                 }
                 $match_code = $match[$i];
                 $ok = true;
                 try {
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $add_row = $pdo->prepare("INSERT INTO $match_code VALUES (, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-                    $add_row->execute(array($data));
+                    $add_row->execute((array)$data);
                 } catch (Exception $e) {
                     $ok = false;
                     echo $e . PHP_EOL;
@@ -31,6 +30,7 @@
                 if ($ok) echo "<br/>Added!<br/>";
                 //for ($i = 0; $i < $size; $i++) echo "<br />".$data[$i];
             }
+            fclose($file);
         } else echo "Error opening file";
     }
 ?>
