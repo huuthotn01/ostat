@@ -20,7 +20,7 @@
                 $ok = true;
                 try {
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $add_row = $pdo->prepare('INSERT INTO $match_code VALUES (, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)');
+                    $add_row = $pdo->prepare("INSERT INTO $match_code VALUES (, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
                     $add_row->execute((array)$data);
                 } catch (Exception $e) {
                     $ok = false;
