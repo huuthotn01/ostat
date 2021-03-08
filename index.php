@@ -7,19 +7,19 @@
         $db["host"], $db["port"], $db["user"], $db["pass"],
         ltrim($db["path"], "/")
     ));
-    try {
+    /*try {
         $username = $db["user"];
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->query("alter user $username superuser");
     } catch (Exception $e) {
         echo $e;
         exit;
-    }
+    }*/
     echo "Importing CSV data..." . PHP_EOL;
     $match = ["week", "month", "quarter"];
     foreach ($match as $match_code) {
         if (($file = fopen("csv_data/".$match_code.".csv", "r")) !== FALSE) {
-            /*while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
+            while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
                 foreach ($data as &$temp) {
                     if ($temp === "") $temp = '0';
@@ -37,8 +37,8 @@
                 }
                 if ($ok) echo "<br/>Added!<br/>";
                 //for ($i = 0; $i < $size; $i++) echo "<br />".$data[$i];
-            }*/
-            try {
+            }
+            /*try {
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 if (($pdo->query("COPY $match_code 
                                         FROM 'csv_data/$match_code.csv' 
@@ -50,7 +50,7 @@
             } catch (Exception $e) {
                 echo $e . PHP_EOL;
                 exit;
-            }
+            }*/
             fclose($file);
             echo "<br /> OK";
         } else echo "Error opening file";
