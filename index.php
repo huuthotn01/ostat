@@ -13,6 +13,9 @@
         if (($file = fopen("csv_data/".$match[$i].".csv", "r")) !== FALSE) {
             while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
+                foreach ($data as $temp) {
+                    if ($temp === null) echo "<br />NULL";
+                }
                 $match_code = $match[$i];
                 $ok = true;
                 try {
