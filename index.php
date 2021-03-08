@@ -10,7 +10,7 @@
     echo "Importing CSV data..." . PHP_EOL;
     $match = ["week", "month", "quarter"];
     foreach ($match as $match_code) {
-        if (($file = fopen("csv_data/".$match[$i].".csv", "r")) !== FALSE) {
+        if (($file = fopen("csv_data/".$match_code.".csv", "r")) !== FALSE) {
             /*while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
                 foreach ($data as &$temp) {
@@ -30,7 +30,6 @@
                 if ($ok) echo "<br/>Added!<br/>";
                 //for ($i = 0; $i < $size; $i++) echo "<br />".$data[$i];
             }*/
-            $ok = true;
             try {
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 if (($pdo->query("COPY $match_code 
@@ -41,11 +40,11 @@
                     exit;
                 }
             } catch (Exception $e) {
-                $ok = false;
                 echo $e . PHP_EOL;
                 exit;
             }
             fclose($file);
+            echo "<br /> OK";
         } else echo "Error opening file";
     }
 ?>
