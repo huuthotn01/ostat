@@ -24,7 +24,7 @@
                     echo $e . PHP_EOL;
                 }
                 if ($ok) echo "<br/>Added!<br/>"; */
-                for ($i = 0; $i < size; $i++) echo "<br />".$data[$i];
+                for ($i = 0; $i < $size; $i++) echo "<br />".$data[$i];
             }
         } else echo "Error opening file";
     }
