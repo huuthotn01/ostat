@@ -26,7 +26,7 @@
                 } catch (Exception $e) {
                     $ok = false;
                     echo $e . PHP_EOL;
-                    exit;
+                    //exit;
                 }
                 if ($ok) echo "<br/>Added!<br/>";
                 //for ($i = 0; $i < $size; $i++) echo "<br />".$data[$i];
