@@ -14,7 +14,8 @@
             while (($data = fgetcsv($file, 0, "|")) !== FALSE) {
                 $size = count($data);
                 foreach ($data as $temp) {
-                    if ($temp === null) echo "<br />NULL";
+                    if ($temp === "") echo "<br />NULL";
+                    else echo "<br />OK";
                 }
                 $match_code = $match[$i];
                 $ok = true;
