@@ -24,7 +24,6 @@
                 foreach ($data as &$temp) {
                     if ($temp === "") $temp = '0';
                 }
-                $match_code = $match[$i];
                 $ok = true;
                 try {
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
